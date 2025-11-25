@@ -1,0 +1,114 @@
+import React from 'react';
+import './Home.css';
+// Assume a utility component for animation and scrolling
+// import StatCounter from '../components/StatCounter/StatCounter'; 
+// import ServiceCard from '../components/ServiceCard/ServiceCard';
+// import TestimonialCarousel from '../components/TestimonialCarousel/TestimonialCarousel';
+
+const Home = () => {
+    // Content Data
+    const stats = [
+        { value: '98%', label: 'Clean Claim Submission Rate' },
+        { value: '30%', label: 'Average Increase in Revenue' },
+        { value: '24/7', label: 'Dedicated Support & Transparency' },
+        { value: '40+', label: 'Specialties Supported' },
+    ];
+
+    const services = [
+        { title: 'Medical Billing', icon: 'Billing_Icon', description: 'Maximize reimbursements with precision.' },
+        { title: 'Medical Coding', icon: 'Coding_Icon', description: 'Ensure compliance & accuracy.' },
+        { title: 'RCM Services', icon: 'RCM_Icon', description: 'End-to-end revenue optimization.' },
+        { title: 'Credentialing', icon: 'Credentialing_Icon', description: 'Streamline provider enrollment.' },
+        { title: 'Denial Management', icon: 'Denial_Icon', description: 'Efficiently recover lost revenue.' },
+        { title: 'AR Follow-up', icon: 'AR_Icon', description: 'Proactive accounts receivable.' },
+    ];
+
+    return (
+        <main>
+            {/* 1. HERO SECTION */}
+            <section className="hero-section">
+                {/* Image Placeholder: Hero banner (healthcare + technology theme) */}
+                <div className="image-placeholder hero-background-img">
+                    [Image: Hero Banner - Hi-Tech Healthcare Interface]
+                </div>
+                <div className="container hero-content">
+                    <h1 className="hero-headline">Revolutionizing Your Revenue Cycle with Expert Billing & Coding.</h1>
+                    <p className="hero-subheadline">Aromed Billing & Coding delivers unparalleled accuracy, efficiency, and compliance for healthcare providers.</p>
+                    <div className="hero-ctas">
+                        <a href="/contact-us" className="primary-btn">Get a Free Consultation</a>
+                        <a href="/services" className="secondary-btn">Explore Services</a>
+                    </div>
+                </div>
+            </section>
+
+            {/* 2. ANIMATED STATISTICS SECTION */}
+            <section className="stats-section section-padding">
+                <div className="container stats-grid">
+                    {stats.map((stat, index) => (
+                        <div key={index} className="stat-item">
+                            {/* In real code, StatCounter component would handle animation */}
+                            <h2 className="stat-value">{stat.value}</h2> 
+                            <p className="stat-label">{stat.label}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* 3. SCROLLING SERVICE CARDS SECTION */}
+            <section className="services-overview section-padding">
+                <div className="container text-center">
+                    <h2>Our Services: Precision in Every Financial Step</h2>
+                    <p className="subtitle">Comprehensive solutions designed to accelerate your practice's financial performance.</p>
+                    
+                    {/* Placeholder for Horizontal Scrolling/Carousel of Service Cards */}
+                    <div className="service-cards-scroll">
+                        {services.map((service, index) => (
+                            <div key={index} className="service-card">
+                                {/* Placeholder for Service Icon */}
+                                <div className="image-placeholder service-icon-placeholder">{service.icon}</div>
+                                <h3>{service.title}</h3>
+                                <p>{service.description}</p>
+                                <a href={`/${service.title.toLowerCase().replace(/\s/g, '')}`} className="read-more">Learn More →</a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* 4. WHY CHOOSE US (PARALLAX SECTION) */}
+            <section className="why-choose-us-parallax section-padding">
+                {/* Image Placeholder: Background for Parallax Section */}
+                <div className="image-placeholder parallax-background">
+                    [Image: Office/Team representing professionalism]
+                </div>
+                <div className="container parallax-content">
+                    <h2>Why Partner With Aromed?</h2>
+                    <p>We combine deep industry expertise with cutting-edge technology to ensure meticulous accuracy and maximum compliance, turning your billing challenges into financial success.</p>
+                    <a href="/why-choose-us" className="primary-btn">Discover The Aromed Advantage</a>
+                </div>
+            </section>
+
+            {/* 5. TESTIMONIALS CAROUSEL */}
+            <section className="testimonials-section section-padding">
+                <div className="container">
+                    <h2 className="text-center">Trusted By Healthcare Professionals</h2>
+                    {/* Placeholder for Testimonials Carousel */}
+                    <div className="image-placeholder carousel-placeholder">
+                        [Testimonials Carousel Placeholder: Rotating Client Reviews]
+                    </div>
+                </div>
+            </section>
+
+            {/* 6. FINAL CTA */}
+            <section className="final-cta-section section-padding text-center">
+                <div className="container">
+                    <h3>Ready to Transform Your Practice's Financial Health?</h3>
+                    <p className="subtitle">Partner with Aromed Billing & Coding for a streamlined, profitable future.</p>
+                    <a href="/contact-us" className="primary-btn">Schedule Your Consultation Today</a>
+                </div>
+            </section>
+        </main>
+    );
+};
+
+export default Home;

@@ -1,0 +1,35 @@
+import React from 'react';
+import './Header.css'; // Use a dedicated CSS file
+import { ReactComponent as Logo } from '../../assets/images/logo_aromed_concept2.svg'; // Assuming SVG component import
+
+const Header = () => {
+    return (
+        <header className="main-header">
+            <div className="container header-content">
+                <a href="/" className="logo">
+                    {/* Placeholder for the Interconnected Leaf Logo */}
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* Abstract Teal A/Leaf shape - Placeholder for actual SVG path */}
+                        <path d="M50 5 L75 95 H25 L50 5 Z" fill="#2EE6D6" opacity="0.8"/> 
+                        <text x="50" y="70" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">AROMED</text>
+                    </svg>
+                    <span className="logo-text">Aromed Billing & Coding</span>
+                </a>
+                <nav className="main-nav">
+                    <ul>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/why-choose-us">Why Choose Us</a></li>
+                        <li><a href="/industries">Industries</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </nav>
+                <a href="/contact-us" className="primary-btn header-cta">Get Consultation</a>
+                <button className="mobile-menu-toggle">☰</button>
+            </div>
+        </header>
+    );
+};
+
+export default Header;

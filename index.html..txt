@@ -1,0 +1,105 @@
+:root {
+    --primary-dark: #1A202C; /* Charcoal Grey */
+    --secondary-dark: #0F172A; /* Midnight Blue */
+    --accent-teal: #2EE6D6; /* Vibrant Teal */
+    --accent-light-grey: #CBD5E0;
+    --text-highlight-white: #FFFFFF;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--accent-light-grey);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-highlight-white);
+    font-weight: 700;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+
+/* Global Utilities */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 6rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons (from Home.module.css - consolidated here for global use) */
+.primary-btn, .secondary-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.primary-btn {
+    background-color: var(--accent-teal);
+    color: var(--primary-dark);
+    border: 2px solid var(--accent-teal);
+}
+
+.primary-btn:hover {
+    background-color: var(--text-highlight-white);
+    border-color: var(--text-highlight-white);
+    color: var(--secondary-dark);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--text-highlight-white);
+    border: 2px solid var(--accent-light-grey);
+}
+
+.secondary-btn:hover {
+    background-color: var(--accent-teal);
+    border-color: var(--accent-teal);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Image Placeholder Styling */
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-dark);
+    border: 1px dashed var(--accent-teal);
+    color: var(--accent-teal);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem;
+    min-height: 250px;
+    width: 100%;
+}
